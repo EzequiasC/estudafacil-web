@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+header h1 {
+    color: #0056b3;
+    font-size: 2rem;
+}
+
+main {
+    width: 100%;
+    max-width: 400px; /* Formato de tela de celular */
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #0056b3;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+.link-conta {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.user-info {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.panel-materias {
+    border: 1px solid #333;
+    padding: 30px 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-acoes ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-acoes a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu-acoes a:hover {
+    color: #0056b3;
+}
