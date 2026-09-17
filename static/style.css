@@ -1,87 +1,150 @@
+/* Reset e Variáveis de Cores */
+:root {
+    --primary: #0056b3;
+    --primary-hover: #004494;
+    --bg-color: #f4f7f6;
+    --surface: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-main);
 }
 
+
 header {
+    background-color: var(--primary);
+    color: white;
+    padding: 30px 20px;
     text-align: center;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #0056b3;
-    padding-bottom: 10px;
-    width: 100%;
-    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    color: #0056b3;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
 }
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
 
 main {
-    width: 100%;
-    max-width: 400px; /* Formato de tela de celular */
-    background: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    border: 2px solid #0056b3;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.login-box form {
+/* =========================================
+   TELA DE LOGIN
+   ========================================= */
+.login-container {
+    max-width: 450px;
+    margin: 0 auto;
+    background: var(--surface);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.login-container h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.login-container form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 20px;
 }
 
-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.login-container input {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 1rem;
+    transition: 0.3s;
 }
 
-button {
-    padding: 10px;
-    background-color: #0056b3;
+.login-container input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.2);
+}
+
+.login-container button {
+    padding: 15px;
+    background-color: var(--primary);
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
 }
 
-button:hover {
-    background-color: #004494;
+.login-container button:hover {
+    background-color: var(--primary-hover);
 }
 
 .link-conta {
     text-align: center;
-    margin-top: 15px;
-    font-size: 0.9rem;
+    margin-top: 25px;
 }
 
-.user-info {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+.link-conta a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================================
+   DASHBOARD (PAINEL)
+   ========================================= */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 30px;
+}
+
+
+@media (min-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 280px 1fr;
+    }
+}
+
+
+.user-card {
+    background: var(--surface);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     margin-bottom: 20px;
-}
-
-.panel-materias {
-    border: 1px solid #333;
-    padding: 30px 15px;
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.menu-acoes {
+    background: var(--surface);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .menu-acoes ul {
@@ -93,13 +156,36 @@ button:hover {
 
 .menu-acoes a {
     display: block;
-    padding: 10px;
-    color: #333;
+    padding: 15px;
+    background-color: #f8f9fa;
+    color: var(--text-main);
     text-decoration: none;
-    font-weight: bold;
-    border-bottom: 1px solid #ccc;
+    font-weight: 600;
+    border-radius: 8px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .menu-acoes a:hover {
-    color: #0056b3;
+    background-color: #e9ecef;
+    border-left-color: var(--primary);
+    color: var(--primary);
+    padding-left: 20px; 
+}
+
+
+.panel-materias {
+    background: var(--surface);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    min-height: 500px;
+}
+
+.panel-materias h2 {
+    color: var(--primary);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
 }

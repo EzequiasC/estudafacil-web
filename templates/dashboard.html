@@ -1,22 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section class="dashboard-box">
-    <div class="user-info">
-        <p><strong>Usuário:</strong> Ezequias</p>
-    </div>
+<div class="dashboard-container">
+    
+    <!-- Menu e Informações do Usuário -->
+    <aside>
+        <div class="user-card">
+            <p>Bem-vindo(a),<br><strong>Ezequias</strong></p>
+        </div>
 
-    <div class="panel-materias">
-        <h2>Painel</h2>
-        <p>Com as informações sobre as matérias.</p>
-    </div>
+        <nav class="menu-acoes">
+            <ul>
+                <li><a href="#">Cadastrar Matérias</a></li>
+                <li><a href="#">Consultar Matérias</a></li>
+                <li><a href="#">Calendário</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <nav class="menu-acoes">
-        <ul>
-            <li><a href="#">Cadastrar Matérias</a></li>
-            <li><a href="#">Consultar Matérias</a></li>
-            <li><a href="#">Calendário</a></li>
-        </ul>
-    </nav>
-</section>
+    <!--Painel Central -->
+    <section class="panel-materias">
+        <h2>Painel de Informações</h2>
+        <p>Resumo das suas matérias, cronograma e pendências aparecerão aqui em breve.</p>
+    </section>
+
+</div>
 {% endblock %}
